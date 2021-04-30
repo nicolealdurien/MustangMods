@@ -1,11 +1,30 @@
 import './ProductScreen.css'
+import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-const ProductScreen = () => {
+// Actions
+import { getProductDetails, getProducts } from '../redux/actions/productActions'
+import { addToCart } from '../redux/actions/cartActions'
+
+const ProductScreen = ({match, history}) => {
+    const [qty, setQty] = useState(1)
+    const dispatch = useDispatch()
+
+    const productDetails = useSelector(state => state.getProductDetails)
+
+    const {loading, error, product} = productDetails
+
+    useEffect(() => {
+        if(product && match.params.id !== product._id) {
+            dispatch(getProductDetails(match.params.id))
+        }
+    }, [dispatch, product, match])
+
     return (
         <div className = 'productscreen'>
             <div className = 'productscreen__left'>
                 <div className = 'left__image'>
-                    <img src = 'https://www.cjponyparts.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/h/d/hd1233_1.2486.jpg' alt = 'product' />
+                    <img src = {product.imageUrl} alt = {product.name} />
                 </div>
                 <div className = 'left__info'>
                     <p className = 'left__name'>Product 1</p>

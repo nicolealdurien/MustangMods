@@ -1,11 +1,11 @@
 const products = [
   {
-    name: "Corsa Cold Air Intake Kit 2015-2017",
+    name: "Ford Performance Cold Air Intake Kit With Calibration Mustang 2015-2017",
     imageUrl:
-      "https://www.cjponyparts.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/c/a/cak181_2.2037.jpgq=80",
+      "https://images-na.ssl-images-amazon.com/images/I/61NXJ9KyTzL._AC_SL1280_.jpg",
     description:
-      "Stop letting the restrictive factory air intake rob your vehicle of its performance. Corsa has designed their intake system to increase the airflow capabilities of the motor to give it a boost in power. The large diameter sculpted air ducts with smooth bends all help to increase the amount of air flowing through the intake at a smoother rate. An enclosed air filter box reduces the amount of hot air entering through the intake, keeping the engine running cool.",
-    price: 369.99,
+      "If you’re looking to dramatically increase horsepower and torque while remaining legal in all 50 States, look no further then this all-new Cold Air Intake Kit with a Calibration (M-9603-M4) from Ford Performance for your 2015-2017 Mustangs!",
+    price: 585.99,
     countInStock: 15,
   },
   {
@@ -13,7 +13,7 @@ const products = [
     imageUrl:
       "https://www.cjponyparts.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/i/n/injses9200icp_1.4679.jpg",
     description:
-      "Purchase a brand new Injen Intercooler Pipe Kit (SES9200ICP) for your vehicle from CJ Pony Parts and receive new power gains in no time! The Injen performance intercooler pipes are made of mandrel-bent aluminum piping that knocks out the rust buildup that exists in most stock pipes. Injen's Automotive Grade Silicone Couplers and Stainless Steel Band Clamp with Inner Protective Liner are also included in this kit. ",
+      "Purchase a brand new Injen Intercooler Pipe Kit (SES9200ICP) for your vehicle from us and receive new power gains in no time! The Injen performance intercooler pipes are made of mandrel-bent aluminum piping that knocks out the rust buildup that exists in most stock pipes. Injen's Automotive Grade Silicone Couplers and Stainless Steel Band Clamp with Inner Protective Liner are also included in this kit. ",
     price: 363.95,
     countInStock: 10,
   },
@@ -22,7 +22,7 @@ const products = [
     imageUrl:
       "https://www.cjponyparts.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/h/d/hd1233_1.2486.jpg",
     description:
-      "If you're looking for a fun and easy way to personalize your 2015-2017 Mustang V6, EcoBoost or GT, you're in luck! CJ Pony Parts now offers this Cervini Unpainted Fiberglass Stalker Hood that includes a functional Ram Air Scoop and Dual Heat Extracting Louvers, and you can easily install it using simple hand tools!",
+      "If you're looking for a fun and easy way to personalize your 2015-2017 Mustang V6, EcoBoost or GT, you're in luck! We now offer this Cervini Unpainted Fiberglass Stalker Hood that includes a functional Ram Air Plenum and Dual Heat Extracting Louvers, and you can easily install it using simple hand tools!",
     price: 799.99,
     countInStock: 5,
   },
@@ -31,7 +31,7 @@ const products = [
     imageUrl:
       "https://images-na.ssl-images-amazon.com/images/I/71ugUmm%2BJ7L._AC_SL1500_.jpg",
     description:
-      "It is capable of voice interaction, music playback, making to-do lists, setting alarms, streaming podcasts, playing audiobooks, and providing weather, traffic, sports, and other real-time information, such as news. Alexa can also control several smart devices using itself as a home automation system.",
+      "Material: High Quality ABS Plastic. Paint Baking and UV-treated on surface. Easy installation with self-adhesive tape.",
     price: 11.99,
     countInStock: 25,
   },

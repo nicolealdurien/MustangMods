@@ -2,6 +2,7 @@
     width: 100%;
     height: 110px;
     background-color: #171717;
+    /* closest to lightning blue is #1874CD */
     display: flex;
     justify-content: space-between;
     align-items: center;

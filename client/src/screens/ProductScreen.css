@@ -59,10 +59,14 @@
 .right__info p > button {
     grid-column: 1/-1;
     padding: 10px 16px;
-    background: #171717;
+    background: #061e36;
     color: #f4f4f4;
-    border: 1px solid #171717;
+    border: 1px solid #061e36;
     cursor: pointer;
+}
+
+.right__info p > button:hover {
+    background: #1a7ee0;
 }
 
 .right__info select {

@@ -13,11 +13,10 @@ const Navbar = ({click}) => {
 
     return (
         <nav className='navbar'>
-        {/* logo */}
             <div className='navbar__logo'>
-                <h2>Shopping Cart</h2>
+                <img src = 'pony.jpg' alt = 'logo' />
+                <h2>MustangMods</h2>
             </div>
-        {/* links */}
             <ul className='navbar__links'>
                 <li>
                 <Link to = 'cart' className = 'cart__link'>

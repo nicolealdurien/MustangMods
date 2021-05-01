@@ -36,13 +36,13 @@
     flex: 1;
     padding: 1rem;
     text-decoration: none;
-    color: #171717;
+    color: #061e36;
     font-size: 1.6rem;
 
 }
 
 .sidedrawer__links > li > a:hover {
-    background: #171717;
+    background: #061e36;
     color: #f4f4f4;
 }
 
@@ -59,7 +59,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #171717;
+    background: #061e36;
     color: #f4f4f4;
     font-size: 1rem;
     margin-left: 8px;

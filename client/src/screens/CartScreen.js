@@ -1,6 +1,7 @@
 import './CartScreen.css'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+// import { StripeCheckout } from 'react-stripe-checkout'
 
 // Components
 import CartItem from '../components/CartItem'
@@ -30,6 +31,10 @@ const CartScreen = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
     }
 
+    const handleToken = (token, addresses) => {
+        console.log({token, addresses})
+    }
+
     return (
         <div className = 'cartscreen'>
             <div className = 'cartscreen__left'>
@@ -52,6 +57,7 @@ const CartScreen = () => {
                     <p>Subtotal ({getCartCount()}) items</p>
                     <p>${getCartSubTotal().toFixed(2)}</p>
                 </div>
+                {/* <StripeCheckout stripeKey = 'pk_test_51In4ABCDwFUaylUuuSu1e43AVzMfTkMUQq4wu5sU7iTRpVkTjhQD9JxkVTZiZPKQLH0VOtKfVPgVP6naDlrpDx4Z00SDMXekQC' token = {handleToken} /> */}
                 <div>
                     <button>Proceed To Checkout</button>
                 </div>

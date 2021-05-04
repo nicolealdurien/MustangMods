@@ -9,7 +9,7 @@ import StripeCheckout from 'react-stripe-checkout'
 import CartItem from '../components/CartItem'
 
 //Actions
-import { addToCart, removeFromCart  } from '../redux/actions/cartActions'
+import { addToCart, removeFromCart } from '../redux/actions/cartActions'
 
 const CartScreen = () => {
 

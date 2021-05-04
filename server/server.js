@@ -1,9 +1,9 @@
 require('dotenv').config()
 const express = require('express')
+const app = express()
 const cors = require('cors')
 let uuid = require('uuidv4')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-const app = express()
 const PORT = process.env.PORT || 5000
 const connectDB = require('./config/db')
 const productRoutes = require('./routes/productRoutes')
@@ -13,6 +13,7 @@ connectDB()
 app.use(express.json())
 app.use(cors())
 app.use('/api/products', productRoutes)
+app.use('/api/auth', require('./routes/authRoutes'))
 
 app.post('/payment', (req, res) => {
     const { product, token } = req.body

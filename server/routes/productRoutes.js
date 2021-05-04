@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const {getAllProducts, getProductById} = require('../controller/productControllers')
+const {getAllProducts, getProductById} = require('../controllers/productControllers')
 
 // @desc GET all products from DB
 // @route GET /api/products

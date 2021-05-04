@@ -46,6 +46,15 @@
     cursor: pointer;
 }
 
+.cartscreen__right div .stripeButton {
+    padding: 10px 17px;
+    width: 100%;
+    background: #061e36;
+    color: #f4f4f4;
+    border: 1px solid #061e36;
+    cursor: pointer;
+}
+
 .cartscreen__right div button:hover {
     background: #1a7ee0;
 }

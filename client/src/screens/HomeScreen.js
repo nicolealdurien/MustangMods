@@ -21,7 +21,7 @@ const HomeScreen = () => {
     }, [dispatch])
     return (
         <div className = 'homescreen'>
-            <h2 className='homescreen__title'>Latest Products</h2>
+            <h2 className='homescreen__title'>Check Out Our Latest Upgrades!</h2>
             <div className='homescreen__products'>
                 {loading ? (
                     <h2>Loading...</h2> 

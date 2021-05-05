@@ -1,10 +1,10 @@
 require('dotenv').config()
 const express = require('express')
-const app = express()
 const cors = require('cors')
-let uuid = require('uuidv4')
+// const uuid = require('uuid').v4
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-const PORT = process.env.PORT || 5000
+const app = express()
+const PORT = process.env.PORT || 8000
 const connectDB = require('./config/db')
 const productRoutes = require('./routes/productRoutes')
 
@@ -13,24 +13,32 @@ connectDB()
 app.use(express.json())
 app.use(cors())
 app.use('/api/products', productRoutes)
-app.use('/api/auth', require('./routes/authRoutes'))
 
 app.post('/payment', (req, res) => {
-    const { product, token } = req.body
-    console.log('PRODUCT', product)
-    console.log('PRICE', product.price)
-    const idempotencyKey = uuid()
+    const { cartItems, token } = req.body
+    
+    const getCartSubTotal = () => {
+        return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
+    }
+
+    const getCartCount = () => {
+        return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0)
+    }
+
+    console.log('PRODUCTS: ', cartItems)
+    console.log('PRICE: $', getCartSubTotal())
+    const idempotencyKey = Math.random()
 
     return stripe.customers.create({
         email: token.email,
         source: token.id
     }).then(customer => {
         stripe.charges.create({
-            amount: product.price * 100,
+            amount: getCartSubTotal(),
             currency: 'usd',
             customer: customer.id,
             receipt_email: token.email,
-            description: `purchase of product.name`,
+            description: `Purchase of ${getCartCount()} items from MustangMods`,
             shipping: {
                 name: token.card.name,
                 address: {

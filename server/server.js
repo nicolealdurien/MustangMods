@@ -85,15 +85,7 @@ app.post('/signup', async (req, res) => {
 
 
 if(process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'client/build')))
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-    })
-} else {
-    app.get('/', (req, res) => {
-        res.send('API running...')
-    })
+    app.use(express.static('client/build'))
 }
 
 

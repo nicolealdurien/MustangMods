@@ -78,7 +78,7 @@ const CartScreen = () => {
                     <p>${getCartSubTotal().toFixed(2)}</p>
                 </div>
                 <StripeCheckout 
-                stripeKey = {process.env.REACT_APP_STRIPE_PUB_KEY} 
+                stripeKey = 'pk_test_51In4ABCDwFUaylUuuSu1e43AVzMfTkMUQq4wu5sU7iTRpVkTjhQD9JxkVTZiZPKQLH0VOtKfVPgVP6naDlrpDx4Z00SDMXekQC' 
                 token = {makePayment} 
                 name = 'Mustang Mods Checkout'
                 amount = {Number(getCartSubTotal().toFixed(2))*100}

@@ -4,9 +4,10 @@ const cors = require('cors')
 // const uuid = require('uuid').v4
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const app = express()
-const PORT = process.env.PORT || 8000
+// const PORT = process.env.PORT || 8000
 const connectDB = require('./config/db')
 const productRoutes = require('./routes/productRoutes')
+const User = require('./models/User');
 
 connectDB()
 
@@ -50,6 +51,36 @@ app.post('/payment', (req, res) => {
     .catch(err => console.log(err))
 })
 
+const handleErrors = (err) => {
+    console.log(err.message, err.code);
+    let errors = { email: '', password: '' }
+    
+    // duplicate error code
+    if (err.code === 11000) {
+        errors.email = "That email address has already been registered."
+        return errors
+    }
+
+    // validation errors
+    if (err.message.includes('user validation failed')) {
+        Object.values(err.errors).forEach(({properties}) => {
+            errors[properties.path] = properties.message
+        })
+    }
+    return errors
+}
+
+app.post('/signup', async (req, res) => {
+    const { email, password } = req.body
+    
+    try {
+        const user = await User.create({ email, password });
+        res.status(201).json(user);
+    } catch (err) {
+        const errors = handleErrors(err);
+        res.status(400).json({errors});
+    }
+})
 
 
 
@@ -60,5 +91,4 @@ app.post('/payment', (req, res) => {
 
 
 
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+app.listen(5000, () => console.log(`Server running on port 5000...`))

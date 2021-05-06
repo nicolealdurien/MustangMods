@@ -4,7 +4,7 @@ const cors = require('cors')
 // const uuid = require('uuid').v4
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const app = express()
-// const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 5000
 const connectDB = require('./config/db')
 const productRoutes = require('./routes/productRoutes')
 const User = require('./models/User');
@@ -84,11 +84,21 @@ app.post('/signup', async (req, res) => {
 
 
 
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    })
+} else {
+    app.get('/', (req, res) => {
+        res.send('API running...')
+    })
+}
 
 
 
 
 
 
-
-app.listen(5000, () => console.log(`Server running on port 5000...`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}...`))

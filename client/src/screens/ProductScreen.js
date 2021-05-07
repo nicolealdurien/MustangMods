@@ -40,7 +40,7 @@ const ProductScreen = ({match, history}) => {
                 </div>
                 <div className = 'left__info'>
                     <p className = 'left__name'>{product.name}</p>
-                    <p>{product.price}</p>
+                    <p>${product.price}</p>
                     <p>{product.description}</p>
                 </div>
             </div>

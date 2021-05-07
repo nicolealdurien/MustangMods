@@ -46,7 +46,7 @@ const ProductScreen = ({match, history}) => {
             </div>
             <div className = 'productscreen__right'>
                 <div className = 'right__info'>
-                    <p>Price: <span>{product.price}</span></p>
+                    <p>Price: <span>${product.price}</span></p>
                     <p>Status: <span>{product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}</span></p>
                     <p>Qty<select value = {qty} onChange = {(e) => setQty(e.target.value)}>
                         {[...Array(product.countInStock).keys()].map((x) => (

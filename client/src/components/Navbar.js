@@ -14,7 +14,9 @@ const Navbar = ({click}) => {
     return (
         <nav className='navbar'>
             <div className='navbar__logo'>
-                <img src = 'pony.jpg' alt = 'logo' />
+                <Link to = '/'>
+                    <img src = 'pony.jpg' alt = 'logo' />
+                </Link>
                 <h2>MustangMods</h2>
             </div>
             <ul className='navbar__links'>

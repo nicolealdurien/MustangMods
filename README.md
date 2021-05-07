@@ -19,37 +19,8 @@ https://mustangmods.herokuapp.com/
 
 
 
-    Separate information pages are also part of the site:
-    - The wasteNOT landing page includes information about the program, about restaurant food donation in general, and about the impacts of food waste.
-    - The Hearts Feeding H-town homepage (the theoretical organization sponsoring the wasteNOT program) includes further information about how donations are collected and distributed, a "Thank You" section listing all past/current restaurants who've donated, and a link to another page listing food bank locations in our distribution network.
-    - The food bank locations page lists all food banks in the WN/HFH network, along with each food bank's address, website, and hours of operation.
+   (more info to come)
 
 
 * **Languages/Frameworks/Tools Used:**
 React, Redux, Node, Express, Javascript, MongoDB, HTML/CSS, Heroku
-
-
-* **Developers:**
-[Younus Qureishy](https://github.com/yqureishy), [Hao Dam](https://github.com/haodam87), and [Nicole Aldurien](https://github.com/nicolealdurien).
-
-
-* **Screenshots of Restaurant User Pages:**
-
-
-![](https://github.com/nicolealdurien/wasteNOT/blob/master/static/img/userpages.png?raw=true)
-
-
-
-
-* **Screenshots of Admin Pages:**
-
-
-![](https://github.com/nicolealdurien/wasteNOT/blob/master/static/img/adminpages.png?raw=true)
-
-
-
-
-* **Screenshots of Foodbank Pages:**
-
-
-![](https://github.com/nicolealdurien/wasteNOT/blob/master/static/img/foodbankpages.png?raw=true)

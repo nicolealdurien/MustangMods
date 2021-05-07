@@ -1,8 +1,5 @@
 # Mustang Mods
 
-* **Video Walkthrough:**
-(coming soon )
-
 * **Live Link:**
 https://mustangmods.herokuapp.com/
 

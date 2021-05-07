@@ -53,7 +53,7 @@ const ProductScreen = ({match, history}) => {
                             <option key = {x+1} value = {x+1}>{x+1}</option>
                         ))}
                     </select></p>
-                    <p><button type = 'button' onClick = {addToCartHandler}>Add To Cart</button></p>
+                    <p>{product.countInStock > 0 ? <button type = 'button' onClick = {addToCartHandler}>Add To Cart</button> : null}</p>
                 </div>
             </div>
                 </>

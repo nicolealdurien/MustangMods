@@ -55,6 +55,7 @@
 .cart__link {
     background: #061e36;
     padding: 10px;
+    padding-left: 16px;
     border-radius: 8px;
 }
 

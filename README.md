@@ -17,6 +17,10 @@ https://mustangmods.herokuapp.com/
     
     The product details page lists all the same product info from the homepage with a longer description. The quantity selector and add-to-cart button are on this page. If an item is out of stock, this will be displayed on the details page and the user will not be blocked from adding it to their cart.
 
+    ```javascript
+    <p>{product.countInStock > 0 ? <button type = 'button' onClick = {addToCartHandler}>Add To Cart</button> : <button type = 'button' >Item Out Of Stock</button>}</p>
+    ```
+
     Within the cart, users are able to change the quantity of chosen items, delete an item, and see their subtotal. Checkout is handled securely through Stripe's API.
 
 * **Languages/Frameworks/Tools Used:**

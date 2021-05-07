@@ -17,7 +17,7 @@ https://mustangmods.herokuapp.com/
     
     The product details page lists all the same product info from the homepage with a longer description. The quantity selector and add-to-cart button are on this page. If an item is out of stock, this will be displayed on the details page and the user will not be blocked from adding it to their cart.
 
-    ```javascript
+    > ```javascript
     <p>{product.countInStock > 0 ? <button type = 'button' onClick = {addToCartHandler}>Add To Cart</button> : <button type = 'button' >Item Out Of Stock</button>}</p>
     ```
 

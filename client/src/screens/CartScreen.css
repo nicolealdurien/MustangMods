@@ -15,6 +15,7 @@
     margin-right: 1rem;
     background-color: transparent;
     padding: 1rem;
+    font-style: italic;
 }
 
 .cartscreen__right {
@@ -57,6 +58,20 @@
 
 .cartscreen__right div button:hover {
     background: #1a7ee0;
+}
+
+.go__home {
+    display: block;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: #f4f4f4;
+    background: #0c2743;
+    padding: 8px 16px;
+    border: 1px solid #0c2743;
+    font-size: 1rem;
 }
 
 @media (max-width: 1320px) {

@@ -1,6 +1,9 @@
 # Mustang Mods
 
-* **Live link:**
+* **Video Walkthrough:**
+(coming soon )
+
+* **Live Link:**
 https://mustangmods.herokuapp.com/
 
 ![](https://github.com/nicolealdurien/MustangMods/blob/main/client/public/homepage.png?raw=true)
@@ -12,15 +15,9 @@ https://mustangmods.herokuapp.com/
 
     The homepage lists the products with titles, images, prices, short descriptions, and a link to the details page for each product. Products are populated from the mongoDB database.
     
-    The product details page lists all the same product info from the homepage with a longer description. The quantity selector and add-to-cart button are on this page. If an item is out of stock, this will be displayed on the details page and the quantity selector is blanked out.
+    The product details page lists all the same product info from the homepage with a longer description. The quantity selector and add-to-cart button are on this page. If an item is out of stock, this will be displayed on the details page and the user will not be blocked from adding it to their cart.
 
-    
-
-
-
-
-   (more info to come)
-
+    Within the cart, users are able to change the quantity of chosen items, delete an item, and see their subtotal. Checkout is handled securely through Stripe's API.
 
 * **Languages/Frameworks/Tools Used:**
-React, Redux, Node, Express, Javascript, MongoDB, HTML/CSS, Heroku
+React, Redux, Node, Express, Javascript, MongoDB, HTML/CSS, Stripe API, Heroku

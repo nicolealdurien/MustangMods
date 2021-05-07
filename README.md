@@ -21,10 +21,13 @@ https://mustangmods.herokuapp.com/
     Within the cart, users are able to change the quantity of chosen items, delete an item, and see their subtotal. Checkout is handled securely through Stripe's API.
 
 * **Product Details Page:**
+
 ![](https://github.com/nicolealdurien/MustangMods/blob/main/client/public/productpage.png?raw=true)
 
 * **Shopping Cart Page:**
+
 ![](https://github.com/nicolealdurien/MustangMods/blob/main/client/public/cart.png?raw=true)
 
 * **Languages/Frameworks/Tools Used:**
+
 React, Redux, Node, Express, Javascript, MongoDB, HTML/CSS, Stripe API, Heroku

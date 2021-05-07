@@ -3,7 +3,7 @@
 * **Live link:**
 https://mustangmods.herokuapp.com/
 
-![](https://github.com/nicolealdurien/wasteNOT/blob/master/static/img/frontpage.png?raw=true)
+![](https://github.com/nicolealdurien/MustangMods/blob/main/client/public/homepage.png?raw=true)
 <br /> <br /><br />
 * **Purpose of the app:** <br/><br/>
     Mustang Mods is a fully responsive e-commerce site that would serve a shop selling pony car modification and enhancement parts. The site was built using the MERN stack (MongoDB, Express, React, and Node) as well as Redux.
@@ -12,7 +12,9 @@ https://mustangmods.herokuapp.com/
 
     The homepage lists the products with titles, images, prices, short descriptions, and a link to the details page for each product. Products are populated from the mongoDB database.
     
-    The product details page lists all the same product info from the homepage with a longer description. The quantity selector and add-to-cart button are on this page.
+    The product details page lists all the same product info from the homepage with a longer description. The quantity selector and add-to-cart button are on this page. If an item is out of stock, this will be displayed on the details page and the quantity selector is blanked out.
+
+    
 
 
 

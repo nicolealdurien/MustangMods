@@ -17,7 +17,7 @@ const CartScreen = () => {
 
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
-    
+
 
     const qtyChangeHandler = (id, qty) => {
         dispatch(addToCart(id, qty))
@@ -64,7 +64,7 @@ const CartScreen = () => {
                         No products have been added to your cart yet. <br/><br/><Link to = '/' className = 'go__home'>Return Home</Link>
                     </div>
                 ) : cartItems.map((item) => (
-                    <CartItem 
+                    <CartItem
                         key = {item.product}
                         item = {item}
                         qtyChangeHandler = {qtyChangeHandler}
@@ -77,9 +77,9 @@ const CartScreen = () => {
                     <p>Subtotal ({getCartCount()}) items</p>
                     <p>${getCartSubTotal().toFixed(2)}</p>
                 </div>
-                <StripeCheckout 
-                stripeKey = 'pk_test_51In4ABCDwFUaylUuuSu1e43AVzMfTkMUQq4wu5sU7iTRpVkTjhQD9JxkVTZiZPKQLH0VOtKfVPgVP6naDlrpDx4Z00SDMXekQC' 
-                token = {makePayment} 
+                <StripeCheckout
+                stripeKey = 'pk_test_51In4ABCDwFUaylUuuSu1e43AVzMfTkMUQq4wu5sU7iTRpVkTjhQD9JxkVTZiZPKQLH0VOtKfVPgVP6naDlrpDx4Z00SDMXekQC'
+                token = {makePayment}
                 name = 'Mustang Mods Checkout'
                 amount = {Number(getCartSubTotal().toFixed(2))*100}
                 shippingAddress

@@ -12,7 +12,7 @@ import { getProducts as listProducts} from '../redux/actions/productActions'
 const HomeScreen = () => {
 
     const dispatch = useDispatch()
-    
+
     const getProducts = useSelector(state => state.getProducts)
     const { products, loading, error } = getProducts
 
@@ -24,12 +24,12 @@ const HomeScreen = () => {
             <h2 className='homescreen__title'>Everything you need to improve the performance or appearance of your ride!</h2>
             <div className='homescreen__products'>
                 {loading ? (
-                    <h2>Loading...</h2> 
+                    <h2>Loading...</h2>
                 ) : error ? (
-                    <h2>{error}</h2> 
+                    <h2>{error}</h2>
                 ) : (
                     products.map(product => (
-                        <Product 
+                        <Product
                             key = {product._id}
                             productId = {product._id}
                             name = {product.name}
